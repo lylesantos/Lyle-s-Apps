@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">VibePlayer</string>
+    <string name="title_activity_main">VibePlayer</string>
+    <string name="package_name">com.vibeplayer.app</string>
+    <string name="custom_url_scheme">com.vibeplayer.app</string>
+</resources>

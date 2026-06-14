@@ -1,0 +1,6 @@
+{
+  "name": "VibePlayer",
+  "description": "An offline-first Android-style MP3 player supporting local file playback and cloud drive downloads, custom equalizers, interactive canvas audio visualizers, and procedurally synthesized offline audio generation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

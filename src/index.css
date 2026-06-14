@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+:root {
+  /* Default: Dark Theme */
+  --bg-outer: #020617;
+  --bg-shell: #030712;
+  --bg-sidebar: #0f172a;
+  --border-main: #1e293b;
+  --border-secondary: #0f172a;
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-third: #94a3b8;
+  --text-muted: #64748b;
+  --glass-bg: rgba(15, 23, 42, 0.45);
+  --glass-border: rgba(255, 255, 255, 0.08);
+}
+
+.light {
+  /* Light Theme */
+  --bg-outer: #cbd5e1; /* slate-300 */
+  --bg-shell: #ffffff; /* crisp white background */
+  --bg-sidebar: #f1f5f9; /* elegant soft slate sidebar */
+  --border-main: #e2e8f0; /* divider/card borders */
+  --border-secondary: #cbd5e1; /* elements and frames */
+  --text-primary: #0f172a; /* high contrast charcoal black */
+  --text-secondary: #334155; /* slate-700 mid tones */
+  --text-third: #475569; /* slate-600 sub information */
+  --text-muted: #94a3b8; /* slate-400 helper icons and text */
+  --glass-bg: rgba(255, 255, 255, 0.65);
+  --glass-border: rgba(15, 23, 42, 0.08);
+}
+
+@theme {
+  --color-slate-955: var(--bg-outer);
+  --color-slate-950: var(--bg-shell);
+  --color-slate-900: var(--bg-sidebar);
+  --color-slate-850: var(--border-main);
+  --color-slate-800: var(--border-secondary);
+  --color-slate-755: var(--border-main);
+  --color-slate-700: var(--border-secondary);
+  --color-slate-650: var(--text-muted);
+  --color-slate-600: var(--text-muted);
+  --color-slate-500: var(--text-muted);
+  --color-slate-400: var(--text-third);
+  --color-slate-350: var(--text-secondary);
+  --color-slate-300: var(--text-secondary);
+  --color-slate-250: var(--text-primary);
+  --color-slate-200: var(--text-secondary);
+  --color-slate-100: var(--text-primary);
+  --color-slate-50: var(--text-primary);
+}
+
+@layer utilities {
+  .sleek-glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+  }
+
+  .neon-accent {
+    background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);
+  }
+
+  .neon-text {
+    background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .progress-knob {
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.6);
+  }
+}

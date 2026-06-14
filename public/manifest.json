@@ -1,0 +1,19 @@
+{
+  "short_name": "VibePlayer",
+  "name": "VibePlayer Music Hub",
+  "description": "Android Offline MP3 & Streaming Media Hub, featuring local file playback, playlist imports, equalizers, and interactive visualizers.",
+  "id": "/",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#090d16",
+  "theme_color": "#10b981",
+  "icons": [
+    {
+      "src": "/vibeplayer_app_icon.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ]
+}
