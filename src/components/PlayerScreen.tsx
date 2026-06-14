@@ -547,35 +547,64 @@ export const PlayerScreen: React.FC<PlayerScreenProps> = ({
               </button>
             </div>
 
-            {/* Setting Item 5: Webhosting & PWA Deployment Guide */}
-            <div className="pt-3.5 space-y-2 text-left">
+            {/* Setting Item 5: Unified Android Native & PWA Deployment Station */}
+            <div className="pt-3.5 space-y-3 text-left">
               <div className="flex items-center gap-1.5 pb-0.5">
-                <Smartphone className="w-3.5 h-3.5 text-emerald-400 animate-pulse" />
-                <span className="text-[10px] font-black uppercase text-slate-400 tracking-wider">Web Hosting PWA Deployment</span>
+                <Smartphone className="w-4 h-4 text-emerald-400 animate-pulse" />
+                <span className="text-[10px] font-black uppercase text-slate-400 tracking-wider">Android & PWA Deployment Station</span>
               </div>
-              <div className="p-3 bg-slate-950/70 border border-slate-900 rounded-xl space-y-2 text-[10.5px] leading-relaxed">
-                <p className="text-slate-300 font-bold">Deploy to your own web hosting!</p>
-                <p className="text-slate-455 text-[10px]">
-                  VibePlayer is pre-configured with a modern PWA Manifest and high-performance Cache Service Worker. It operates 100% standalone and client-side (no Node.js custom backend required for play, ID3 edits, or indexedDB).
-                </p>
-                <div className="bg-slate-900/40 p-2.5 rounded-lg border border-slate-800/50 space-y-1">
-                  <p className="text-slate-200 font-bold text-[9.5px] flex items-center gap-1">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                    BUILD COMMAND:
+              
+              <div className="p-3 bg-slate-950/80 border border-slate-900 rounded-2xl space-y-3.5 text-[10.5px] leading-relaxed">
+                
+                {/* Android Native Setup */}
+                <div className="space-y-1.5">
+                  <div className="flex items-center gap-2">
+                    <div className="px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-400 font-bold text-[9px] font-mono select-none">APK</div>
+                    <p className="font-bold text-slate-200">Native Android App (Capacitor)</p>
+                  </div>
+                  <p className="text-slate-400 text-[10px]">
+                    Capacitor is fully integrated into this repository. You can generate a native installable APK to distribute on GitHub or install on your device:
                   </p>
-                  <p className="text-[9px] font-mono text-emerald-400 select-all bg-black/40 p-1.5 rounded border border-slate-900">
-                    npm run build
-                  </p>
+                  
+                  <div className="bg-slate-950 p-2.5 rounded-lg border border-slate-900 font-mono text-[9px] text-slate-400 select-all space-y-1 overflow-x-auto leading-normal">
+                    <p className="text-emerald-500 font-bold"># 1. Sync React builds to the native Android project</p>
+                    <p className="text-slate-350">npm run build && npx cap sync</p>
+                    
+                    <p className="text-emerald-500 font-bold mt-2"># 2. Build the production debug APK locally</p>
+                    <p className="text-slate-350">cd android && ./gradlew assembleDebug</p>
+                    
+                    <p className="text-emerald-500 font-bold mt-2"># 3. Alternatively, open in Android Studio to key-sign your release build</p>
+                    <p className="text-slate-350">npx cap open android</p>
+                  </div>
+                  
                   <p className="text-slate-500 text-[9.5px]">
-                    This compiles all files into the <span className="text-slate-300 font-semibold">/dist</span> folder.
+                    The compiled `.apk` file will reside in <code className="text-slate-300 font-mono">android/app/build/outputs/apk/debug/app-debug.apk</code>, ready to upload as a GitHub Release!
                   </p>
                 </div>
-                <div className="space-y-1 text-slate-400 text-[10px]">
-                  <p className="font-bold text-slate-300 text-[9.5px]">Upload Step-by-Step:</p>
-                  <p>1. Built files live inside the <span className="text-slate-300 font-semibold font-mono">/dist</span> output directory.</p>
-                  <p>2. Zip the <span className="text-slate-300 font-semibold font-mono">/dist</span> contents and upload it directly using FTP, cPanel, Netlify Drop, Github Pages or Hostinger.</p>
-                  <p>3. Visitors can access your URL on any smartphone, and click <span className="text-emerald-400 font-bold">"Add to Home Screen"</span> to install VibePlayer directly as a modern fast offline application!</p>
+
+                <div className="border-t border-slate-900 my-1"></div>
+
+                {/* Webhosting & PWA Setup */}
+                <div className="space-y-1.5">
+                  <div className="flex items-center gap-2">
+                    <div className="px-1.5 py-0.5 rounded bg-blue-500/10 text-blue-400 font-bold text-[9px] font-mono select-none">PWA</div>
+                    <p className="font-bold text-slate-200">Web Hosting Deployment</p>
+                  </div>
+                  <p className="text-slate-400 text-[10px]">
+                    Deploy this as a high-performance installer app on any free/paid static web hosting:
+                  </p>
+                  
+                  <div className="bg-slate-900/40 p-2.5 rounded-lg border border-slate-800/50 space-y-1">
+                    <p className="font-bold text-[9px] text-slate-300">UPLOAD GUIDE:</p>
+                    <p className="text-slate-400 text-[9.5px]">
+                      1. Upload everything inside the compiled <code className="text-slate-200 font-mono">/dist</code> directory directly into your server root or FTP public folder (e.g. Hostinger, cPanel, Netlify, or GitHub Pages).
+                    </p>
+                    <p className="text-slate-400 text-[9.5px]">
+                      2. Users loading your URL on Android/iOS can immediately choose <span className="text-emerald-400 font-bold">"Add to Home Screen"</span> to launch VibePlayer in sleek, borderless, zero-browser-frame mobile view!
+                    </p>
+                  </div>
                 </div>
+
               </div>
             </div>
 
